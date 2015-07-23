@@ -7,8 +7,16 @@
 //
 
 #import "ViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIView *profilePicOutsideLayer;
+
+@property (weak, nonatomic) IBOutlet UIImageView *profilePic;
+@property (weak, nonatomic) IBOutlet UIView *followButtonContainer;
+@property (weak, nonatomic) IBOutlet UIView *followButton;
+@property (weak, nonatomic) IBOutlet UIView *accountButtonContainer;
 
 @end
 
@@ -17,6 +25,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.profilePicOutsideLayer.layer.cornerRadius = 10.0;
+    
+    self.profilePic.layer.cornerRadius = 10.0;
+    self.profilePic.layer.masksToBounds = true;
+    
+    self.followButtonContainer.layer.cornerRadius = 10.0;
+    self.followButton.layer.cornerRadius = 10.0;
+    self.accountButtonContainer.layer.borderWidth = 1.0;
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
