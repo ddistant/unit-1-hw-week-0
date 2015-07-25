@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIView *followButtonContainer;
 @property (weak, nonatomic) IBOutlet UIView *followButton;
 @property (weak, nonatomic) IBOutlet UIView *accountButtonContainer;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *tweetsMediaFavorites;
 
 @end
 
@@ -32,8 +33,11 @@
     self.profilePic.layer.masksToBounds = true;
     
     self.followButtonContainer.layer.cornerRadius = 10.0;
-    self.followButton.layer.cornerRadius = 10.0;
-    self.accountButtonContainer.layer.borderWidth = 1.0;
+    self.followButtonContainer.layer.borderWidth = 1.2;
+    self.followButtonContainer.layer.borderColor = [UIColor colorWithRed: 0.34f green: 0.67f blue: 0.92f alpha: 1.0f].CGColor;
+    self.accountButtonContainer.layer.borderWidth = 1.2;
+    self.accountButtonContainer.layer.borderColor = [UIColor colorWithRed: 0.34f green: 0.67f blue: 0.92f alpha: 1.0f].CGColor;
+    self.accountButtonContainer.layer.cornerRadius = 10.0;
 
     
     
